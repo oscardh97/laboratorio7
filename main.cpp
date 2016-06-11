@@ -22,7 +22,8 @@ int main(int argc, char* argv[]){
 	int cantEscuadrones = 0;
 	bool otroSoldado;
 	while(usuarios < 2){
-		cout << "USUARIO NUMERO" << usuarios + 1 << endl;
+		cout << "--------------------------------------------USUARIO NUMERO" << usuarios + 1 << "--------------------------------------------"<< endl;
+		cout << "----------------------Para cada escuadron se pedira automaticamente un soldado---------------------------" << endl;
 		while(cantEscuadrones < 4){
 			string nombre;
 			cout << "Ingrese el nombre del escuadron " << cantEscuadrones + 1 << endl;
@@ -71,7 +72,7 @@ int main(int argc, char* argv[]){
 				}
 				// cout << escuadrones[escuadrones.size() - 1]->toString();
 				imprimirEscuadrones(escuadrones);
-				cout << "Desea agregar otro Soldado? 1/0" << endl;
+				cout << "Desea agregar otro Soldado al escuadron? 1/0" << endl;
 				cin >> otroSoldado;
 			}while(otroSoldado);
 			cantEscuadrones++;
@@ -134,9 +135,9 @@ int main(int argc, char* argv[]){
 void imprimirEscuadrones(vector <Escuadron*> escuadrones){
 	for(int i = 0; i < escuadrones.size(); i++){
 		if(i == 0)
-			cout << "Escuadrones de usuario: 1" << endl;
+			cout << "--------------------------------------------Escuadrones de usuario: 1--------------------------------------------" << endl;
 		if(i == 4)
-			cout << "Escuadrones de usuario: 2" << endl;
+			cout << "--------------------------------------------Escuadrones de usuario: 2--------------------------------------------" << endl;
 		cout << i + 1<< ".- " << escuadrones[i]->toString();
 	}
 }

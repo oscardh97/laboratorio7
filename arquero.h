@@ -1,4 +1,4 @@
-#pragma once;
+#pragma once
 #include "soldado.h"
 #include <sstream>
 using std::string;
